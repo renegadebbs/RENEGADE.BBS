@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"   
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+	<meta name="robots" content="index, follow" />
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="" />
+
+	<link rel="shortcut icon" href="favicon.ico" />
+
+	<link rel="stylesheet" type="text/css" href="style/style.css" media="screen" />
+
+	<title>Renegade BBS Software</title>
+
+</head>
+<body>
+	<div id="header">
+		<h1 align="center"><a href="#"><img src=logo.png width="352" height="90" border="0" /></a></h1>
+<div id="header_navigation">
+	  <a href="http://twitter.com/renegadebbs">Twitter</a> |
+	  <a href="#">RSS</a> |
+	  <a href="#">Contact</a>
+	</div>
+	</div>
+	
+	<div class="navigation navigation_left">
+		<span class="navigation_title">Navigation</span>
+		<ul>
+        <li><a href="docs/">Documentation</a></li>
+			<li><a href="files/">Files</a></li>
+			<li><a href="telnet://ttb.slyip.com">Support BBS</a></li>
+		</ul>
+		<span class="navigation_title">Latest Version</span>
+      <ul>
+          <li><a href="files/RGV110F.ZIP">Renegade v110 full</a></li>
+          <li><a href="files/RGV110U.ZIP">Renegade v110 upgrade</a></li> </ul>
+        <br />
+        <span class="navigation_title">Past Releases</span>
+        <ul>
+        <li><a href="files/10-23-2008_RGV100F.ZIP">10-23-2008 Full</a></li>
+        <li><a href="files/10-23-2008_RGV100U.ZIP">10-23-2008 Update</a></li></ul>
+         <a href="files/">Older versions here..</a>
+        </p></ul>
+      <ul>
+    
+    <p>&nbsp;</p>
+    </ul>
+        <ul>
+		  <li></li>
+		</ul>
+	</div>
+	
+	<div class="navigation navigation_right">
+	  <p>&nbsp;</p>
+		<span class="navigation_title">Useful Links</span>
+	    <ul>
+			<li><a href="http://gamesrv.ca">Gamesrv Telnet Daemon</a></li>
+			<li><a href="http://pcmicro.com/NetFoss/download.html">Net2BBS Telnet Daemon</a></li>
+			<li></li>
+			<li></li>
+		<Br />
+        
+			<li><a href="http://www.bbsdocumentary.com/software/IBM/DOS/RENEGADE">Renegade on BBSdoc</a></li>
+		
+            <li><a href="http://flashterm.com">Flashterm</a></li>
+	        <li> <a href="http://blocktronics.net">Blocktronics</a></li>
+    </ul>
+	</div>
+	
+	<div class="content with_navigation_left with_navigation_right">
+		<div class="bg_left">
+			<div class="bg_right">
+				<h3><a href="#">Welcome</a></h3> 
+				<div class="subheader"></div>
+<p> Renegade BBS is a FREE <a href="http://en.wikipedia.org/wiki/Bulletin_board_system">bulletin board software</a> derived from the<a href="http://en.wikipedia.org/wiki/Telegard"> Telegard BBS</a>  v2.5g source code (Which is in turn a modified version of the WWIV pascal  source code). </p>
+<p>&nbsp;</p>
+<p>  Renegade offers SysOps the  ultimate in BBS configuration, allowing your BBS to achieve a UNIQUE look and  feel.</p>
+<p align="center">Renegade is a <a href="http://en.wikipedia.org/wiki/Software_testing#Beta_testing">Beta test</a> BBS software, the current development team consists of T.J. McMillen and Lee Palmer		  </p>
+<BR />	<a href="bbslist.html">Active RG BBSes</a>	 <BR />		 <BR />		 <BR />		 <BR />		 <BR />		 <BR />
+         
+         
+         
+          </div>  </div>  </div>
+	
+	
+	<div id="footer">
+	  <p>&nbsp;</p>
+      <p><a href="ss0.png"><img src="ss0.png" height="150" width="300"/></a> <a href="ss1.png"><img src="ss1.png" height="150" width="300"/></a> <a href="ss2.png"><img src="ss2.png" height="150" width="300"/></a></p>
+      <p>Some Screenshots from past and present Renegade BBSes</p>
+        <p>&nbsp;</p>
+</div>
+
+
+
+
+
+<!-- bbsbanner code begin -->
+<CENTER>
+<IFRAME SRC="http://bbsbanner.darktech.org/work.php?ID=YOURID" width=468 height=60 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling="no"></IFRAME><Br>
+<a href="http://bbsbanner.darktech.org" target="_blank">BBS Banner Exchange</a>
+<font size=2><a href="http://bbsbanner.darktech.org/contact"> / Report a Dead Link</a> </font>
+</font>
+
+<!-- bbsbanner code end -->
+</body> <font size=1><BR /><BR /><BR /><BR />
+<p>&copy; 2009 | 
+		Design by <a href="http://de.marekventur.de">Marek Ventur</a> | 
+		Visit <a href="http://www.weizenspr.eu">Weizenspreu</a></p>
+
+
+<!-- easter egg!
+ hi. cott's original webpage can be found at http://web.archive.org/web/20021122075020/http://www.mindspring.com/~cott/ -->
+
+
+
+</html>

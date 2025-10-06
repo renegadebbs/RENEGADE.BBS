@@ -1,0 +1,62 @@
+
+I don't know if anybody's interested in this, but i made a sort of hack
+protocol using a batchfile and winrar.
+
+what it allows you to do is compress and send your files WITH long filenames to your user.
+it will also retain directory structure [or change it so it doesnt] so said files
+are organized how your personal file areas are.
+
+example:
+#  Archive D:\bbs\TEMP\FILES78.rar
+2009-11-18 12:14             7             7  BBS\BBSFILES\HPVAC\testfile.txt
+#
+# Total                   Size        Packed  Files
+#                            7             7  1
+
+
+It creates a temporary .rar file using  files(user numer_.RAR and then
+sends it via fdsz [or any fossil protocol you'd care to add to the batchfile)
+
+I'm really satisified with it, and the bonus is users get long file names and their
+files are sorted.
+
+
+
+
+--begin protocol--
+!. Type/protocl: Active - Batch
+1. Keys/descrip: X / [X] Batch download as .RAR
+2. ACS required: *None*
+3. Temp. log   : *None*
+4. <U>L log    : *None*
+   <D>L log    : *None*
+5. <U>L command: *None*
+   <D>L command: BATCHDL.BAT %#
+               : DL File List: D:\BBS\download.lst / Max DOS chars: 127
+6. Codes mean  : Transfer Successful
+7. <U>L codes  : (1) ""       (2) ""       (3) ""
+               : (4) ""       (5) ""       (6) ""
+   <D>L codes  : (1) ""       (2) ""       (3) ""
+               : (4) ""       (5) ""       (6) ""
+8. Environ. cmd: *None*
+
+Modify menu [?=Help]:
+
+--end--
+
+--begin batchfile--
+@echo off
+
+D:
+CD\BBS\PROT
+cmd /c RMDIR /S /Q D:\BBS\TEMP
+cmd /c MD D:\BBS\TEMP
+
+
+cmd /c start /wait winrar a -m5 -ms -IBCK D:\BBS\TEMP\FILES%1.rar @D:\BBS\download.lst
+fdsz sz D:\BBS\TEMP\FILES%1.rar
+---end---
+
+i understand this is all wrapped, so get it at:
+
+http://eob-bbs.com/renegade/rgprot.txt
