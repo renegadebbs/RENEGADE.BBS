@@ -1,0 +1,103 @@
+                      ^0Renegade Menu Command Listing
+
+Misc                                    Doors
+-C  Display Message                     DC  Chain.Txt (Wwiv) Door
+-F  Display Text File (w/ MCI Codes)    DD  Dorinfo1.Def (Rbbs) Door
+/F  Display Text File (w/o MCI Codes)   DG  Door.Sys (Gap) Door
+-L  Displays Line of Text               DS  Sfdoors.Dat (Spitfire) Door
+-N  Ask Question, Default No            DW  Callinfo.BBS (Wildcat) Door
+-Q  Read An Infoform                    DP  Pcboard.Sys  (Pcboard) Door
+-R  Read Infoform Answers               D-  Door w/ No Interface File
+-S  Add Line to Sysop Log               
+-Y  Ask Question, Default Yes           Hangup
+-;  Execute Macro                       HC  Careful Logoff
+-$  Prompt For Password                 HI  Immediate Logoff
+-^  Goto Menu                           HM  Display String And Logoff
+-/  Gosub Menu                          
+-\  Return From Menu
+                                        Batch
+Archive                                 BC  Clear Batch Queue      [U=Uploads]
+AA  Add Files to Archive                BD  Download Batch Queue
+AC  Convert Archive                     BL  List Batch Queue       [U=Uploads]
+AE  Extract Files From Archive          BR  Remove File From Queue [U=Uploads]
+AG  Manipulate Extracted Files          BU  Upload Queue
+AM  Modify Comments                     B?  List Files In Batch Queue
+AR  Rearchive Files
+AT  Run Integrity Tests                 Automessage
+                                        UA  Reply to Automessage
+Files                                   UR  Read Automessage
+FA  Change File Area [L=Lst,+,-]        UW  Write Automessage
+FB  Add File to Batch
+FC  Start FILES.BBS Importing
+FD  Download a File                     Messages
+FF  Search For a Description            MA  Change Message Area [L=Lst,+,-]
+FL  List Files                          ME  Send Private Email
+FN  Newscan Files [C=Crnt,G=Glob]       MK  Edit/Delete Outgoing Mail
+FP  Change Pointer Date                 ML  Send Mass Mail
+FS  Search For a Filespec               MM  Read Private Mail
+FU  Upload a File                       MN  Newscan Messages [C=Crnt,G=Glob]
+FV  View An Archive                     MP  Post a Message
+FZ  Set File Areas to Newscan           MR  Read Messages
+F@  Create Temporary Directory          MS  Scan Messages
+F#  Change File Area                    MU  List Users w/ Access to Base
+                                        MY  Scan For Personal Messages
+Sysop                                   MZ  Set Message Bases to Scan
+*B  Message Base Editor                 M#  Change Message Base
+*C  Change to Another User
+*D  Enter Pseudo-Dos                    Offline Mail
+*E  Event Editor                        !P  Set Message Pointers
+*F  File Base Editor                    !D  Download a .Qwk Packet
+*L  Show Sysop Logs                     !U  Upload a .Rep Packet
+*N  Edit a Text File
+*P  System Config Editor                Other
+*R  Conference Editor                   O1  Shuttle: Ask For BBS Password
+*U  User Editor                         O2  Shuttle: Apply As New User
+*V  Voting Editor                       O3  Shuttle; Password Prompt
+*X  Protocol Editor                     OA  Autovalidation [Password]
+*Z  System Activity Log                 OC  Page The Sysop
+*1  Edit Files In File Area             OE  Pause Screen
+*2  Sort Files                          OF  Toggles AR Flag [+-! AR Flag]
+*3  Read All Private Mail               OG  Toggles AC Flag [+-! AC Flag]
+*4  Download Any File                   OL  List Today's Callers
+*5  Recheck File Sizes/Avail            ON  Clear Screen
+*6  Upload Locally                      OP  Modify User Info [Name, Age, Etc]
+*7  Validate Files                      OQ  Quit & Save User Info [Newinfo.Mnu]
+*8  Add GIF Specs to Files              OR  Join a Conference
+*9  Pack Message Bases                  OS  System Bulletins
+*#  Menu Editor                         OU  Complete User Listing
+*$  Full Directory                      
+*%  Condensed Directory
+                                        Read Prompt
+Voting                                  R#  Message Number
+V# Vote On a Topic Number               R-  Read Previous Message
+VA Add a Voting Topic                   RA  Read Message Again
+VL List Voting Topics                   RB  Back In Thread
+VR Results of a Topic                   RC  Continuous Read
+VU Users Who Voted On a Topic           RD  Delete Message (Owner Only)
+VT Track a User's Votes                 RE  Edit Message (Owner Only)
+VV Vote On All Unvoted Topics           RF  Forward In Thread
+                                        RG  Goto Next Base
+Multinode                               RH  Highread Pointer Set
+NA Toggle Page Availability             RI  Ignore Remaining
+ND Recycle/Take Down a Node             RL  List Messages
+NG Join Group Chat                      RM  Move Message (Msg Sysop Only)
+NO Online Users Listing                 RN  Next Message
+NP Page Another User For Chat           RQ  Quit Reading
+NS Send Message to Node                 RR  Reply to Message
+NT Toggle Stealth On/Off                RT  Toggle Newscan
+NW Set Node's Current Activity          RU  Edit Author (Sysop Only)
+                                        RX  Extract Message (Co-sysop Only)
+Time Bank
+$D  Deposit Time                        File Prompt
+$W  Withdraw Time                       L1  Continue Listing
+                                        L2  Quit Listing
+Credit                                  L3  Next File Base
+$-  Decrease Balance                    L4  Toggle Newscan of Base
+$+  Increase Balance                    L5  File Tag Single D/L
+                                        L6  File Tag Batch D/L
+BBS Listings
+TA  Add to BBS List
+TE  Edit BBS List
+TD  Remove BBS from List
+TV  "Short View" of BBS List
+TX  "Extended View" of BBS List

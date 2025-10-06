@@ -1,0 +1,203 @@
+MCI Codes are display variables. Some change from caller to caller, some
+change when the sysop makes a configuration, and some change when a user
+does something online. An MCI code represents a piece of information.
+When Renegade sees the MCI code, it traslates the code, and displays the
+relevant piece of information.
+
+For example:
+
+When I log onto my own system, anywhere the %UN MCI code appears, my handle
+will appear instead. Like this;
+
+Handle: %UN
+
+would display as
+
+Handle: Adrian Blood
+
+If we threw in the %RN (Real Name) it'd look like this;
+
+Handle: %UN
+Real Name: %RN
+
+to
+
+Handle: Adrian Blood
+Real Name: Ken Reaverson
+
+and so on. MCI Codes are a valuable tool to the sysop. Without them, users
+wouldn't know which file or message base they were in, how much time they
+have left online, or how many file points they have left. :)
+
+컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴�
+                                  MCI CODES
+컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴�
+
+         Account balance                        %AB
+         User's address                         %AD
+         Aborting off                           %AO
+         Baud rate                              %BD
+         BBS Name                               %BN
+         BBS Phone                              %BP
+         BackSpace 1 Character                  %BS
+         Clear screen                           %CL
+         Current Message Number                 %CM
+         Current Conference Name                %CN
+         Credits                                %CR
+         Current Conference Tag                 %CT
+         User defined answer #1                 %D1
+         User defined answer #2                 %D2
+         User defined answer #3                 %D3
+         Date                                   %DA
+         Debits                                 %DB
+         Daily download limit                   %DD
+         Delay                                  %DE
+         Display file in MISC directory         %DFfilename.ext%
+         User's kbytes downloaded               %DK
+         User's number of files downloaded      %DL
+         User's Download Security Level         %DS
+         Time of day (morning, night, etc)      %DT
+         Date of subscription expiration        %ED
+         Days left until expiration             %EX
+         User's email sent                      %ES
+         User's email waiting                   %EW
+         Current File base number               %F#
+         Current File base name                 %FB
+         User's first date on                   %FD
+         Free Kbytes in current file area       %FK
+         User's first name                      %FN
+         Mr. or Ms. by gender                   %GN
+         Highest Message Number Available       %HM
+         Illegal logons                         %IL
+         Kbyte daily download limit             %KD
+         U/D k ratio                            %KR
+         User's last call date                  %LC
+         Line Feed                              %LF
+         User's last name                       %LN
+         User's Location (City/State)           %LO
+         Current Message base number            %M#
+         Current Message base name              %MB
+         Time left in minutes                   %ML
+         Minutes online so far                  %MO
+         Messages remaining left to read        %MR
+         Node Number                            %ND
+         U/D ratio                              %NR
+         User's terminal emulation              %O1
+         User's screen size                     %O2
+         User's screen clearing toggle          %O3
+         User's f/s editor toggle               %O4
+         User's screen pausing toggle           %O5
+         User's hotkey toggle                   %O6
+         User's expert on/off                   %O7
+         User's mail forwarding                 %O8
+         User's color on/off                    %O9
+         Pause                                  %PA
+         Post/Call Ratio                        %PC
+         User's data phone number               %PD
+         Pausing off                            %PO
+         User's number of posts                 %PS
+         User's voice phone number              %PV
+         User's password                        %PW
+         Batch Queue - Download #               %QD
+         Batch Queue - Upload #                 %QU
+         User's Real Name                       %RN
+         SysOp defined category #1              %S1
+         SysOp defined category #2              %S2
+         SysOp defined category #3              %S3
+         Total system callers                   %SC
+         User's Security Level                  %SL
+         SysOp Name                             %SN
+         User's sex (Male/Female)               %SX
+         User's time bank time added today      %TA
+         User's time bank time                  %TB
+         User's total calls                     %TC
+         User's number of downloads today       %TD
+         Time                                   %TI
+         User's kbytes of downloads today       %TK
+         User's Time left                       %TL
+         User's time on today                   %TO
+         User's total time on                   %TT
+         Total Users                            %TU
+         User's age                             %UA
+         User's birthdate                       %UB
+         User's calls today                     %UC
+         User's kbytes uploaded                 %UK
+         User's number of files uploaded        %UL
+         User's Handle                          %UN
+         User number                            %UU
+         Renegade version                       %VR
+         User's Zip Code                        %ZP
+
+컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴�
+                             SPECIAL MCI CODES
+컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴컴�
+
+    Some single character MCI codes are used outside of what the remote user
+    would see.  These are used in Doors, Protocols, and Archivers, and other
+    SPECIAL places.  Here is a list of them:
+
+          %A        Actual Baud Rate
+          %B        Baud Rate reported (Locked, if active.)
+          %C        Archive Comment (Archivers only)
+          %C        Com port hex address (Protocols only)
+          %D        Download File List
+          %E        Com port IRQ
+          %F        File to be processed
+          %G        Graphics (0=Off, 1=On)
+          %I        Filenames
+          %K        Complete name and path of the current file bases's *.DIR
+                    file.
+          %L        Log file (Protocol)
+          %M        Main RG Directory
+          %N        Node Number
+          %O        Door Drop file for Current Node
+          %P        COM Port Number
+          %R        Current User's Real Name
+          %T        Time Left
+          %U        Current User's Handle
+          %1        Current User's Real First Name
+          %2        Current User's Real Last Name
+          %#        User Number
+
+        In ACTIONS.LST ONLY, the following MCI codes are in effect.
+
+          %G        Will display His/Her based on the sender's gender.
+          %H        Will display Him/Her based on the sender's gender.
+
+        In QUOTE SECTION OF STRING.DAT ONLY, the following MCI codes are in
+        effect.
+
+          @F        User the message is from.
+          @T        User the message is to.
+          @D        Date of the message.
+          @S        Subject of the message.
+          @B        Message Base the message was posted on.
+
+        If you want to make sure the MCI code displays properly, you can
+        pad and justify it. The command format is like this:
+
+           <MCI><Justification command><Length of string>
+
+            ex: %UN#50
+
+            %UN is the MCI Code (User Name)
+            # is the justification code (Center)
+            50 is the length of the string
+
+            So the above would display the user name in the center of a
+            50 character string.
+
+            These are the justification commands:
+
+         # - Centers the MCI in the middle of a string x characters long
+             Ex: %UN#50, as above
+         { - Left Justifies the MCI code
+             Ex: %UN{50, This would display the user name forced to the left,
+             padded to 50 characters.
+         } - Right Justifies the MCI code
+             Ex: %UN}50, This would display the user name forced to the right,
+             padded to 50 characters
+
+        Padding limits the amount of characters. For instance, if you pad
+        the string to 20, and what would normally show is 25 characters, only
+        the first 20 would display.

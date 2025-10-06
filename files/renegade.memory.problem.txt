@@ -1,0 +1,18 @@
+Date: 1:34 am  Mon Aug 9, 2010         Number : 27 of 30
+From: Exodus                           Area   : Renegade BBS Support
+To  : Jas Hud                          Refer #: None
+Subj: Re: himem.sys error              Replies: 1
+Stat: Sent                             Origin : 08 Aug 10  17:51:57
+
+JH> do people have to create a new .pif file?
+JH>
+JH> i had a guy try it out and tell me he had that problem, and i recall i had
+JH> that problem on a VM i was running gy on
+
+Edit the _DEFAULT.PIF file in the windows or windows\system32 directory and
+change all the memory options from "NONE" to "AUTO" ...
+
+... No wanna work.  Wanna bang on keyboard.
+
+--- Renegade v1.18/Alpha
+ * Origin: The Titantic BBS Telnet - ttb.slyip.com (25:25/0)

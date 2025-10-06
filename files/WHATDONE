@@ -1,0 +1,273 @@
+--[ Renegade 05-19.4 released ]------------------------------------------------
+
+  |14                        Changes since v01-10.4/DOS
+
+     |11CHANGE -   |03Updated Copyright notice to reflect the new year.
+
+     |11FIXED  -   |03Slight Memory leak in v01-10.4/DOS.  This in turn would
+                cause Renegade to eventuatly eat up all availble memory
+                in a few years of use if the computer was never rebooted.
+
+     |11ADDED  -   |11/F |03MENUCMD to disable MCI Codes from displaying inside
+                of a text file.  This MENUCMD compliments the -F CMD Key.
+
+     |11ADDED  -   |03Option |11/M |03when entering a message to turn on or off
+                using MCI Codes per message.
+
+     |11ADDED  -   |03Added option to allow the SysOp access to the amount
+                of time to give each timeslice.  This may help some systems
+                in which Renegade hogs a lot of CPU (ie: Windows 2000). If
+                you do not have much of a problem with sluggish performance
+                it is suggested that you leave this option at the default
+                setting.
+
+                [System Config -> D. System Variables -> V. Time Slices]
+
+     |11FIXED  -   |03Slight problem when displaying "NEW" bulletins to users
+                when they first logon.  Renegade would display 22 of them
+                across, then start putting each new one on a new line.
+
+     |11REMOVE -   |03Removed "Digiboard" support in the codebase.  Really,
+                who would use one of those now-a-days anyways with a DOS
+                based BBS?  If this is an issue for anyone, please e-mail
+                us and we'll take care of it for you.
+
+     |11ADDED  -   |03Added option to System Config to post the BBS's telnet
+                URL.  This is under System Conifg, Option A Main BBS Config.
+                Just a cosmetic add, as before you could only type in a
+                telephone number for the BBS.  Now you have a choice. ;)
+                Will have to set for each node.  So, node 1 can be
+                node1-yourbbs.com and node 2 can be node2-yourbbs.com, etc.
+                Or you can set each one to the same url.
+
+     |11ADDED  -   |03Added |11~TN |03MCI Code to BBSME.ASC/ANS and BBSMN.ASC/ANS
+                to reflect the new Telnet address line to the BBS list.
+
+     |11CHANGE -   |03Changed the follow command keys to reflect new BBS
+                list format change.
+
+                |11OB |03: Changed to CMD Key |11TV|03 {short view of bbslist}
+                |11OA |03: Changed to CMD Key |11TA|03 {Add to bbslist}
+
+                |03Added the following CMD Keys to be able to have more
+                control over the BBS List.
+
+                |11TA  |03: BBSList Add           {formally CMD Key OA}
+                |11TE  |03: BBSList Edit / Remove
+                |11TV  |03: BBSList Short View    {formally CMD Key OB}
+                |11TX  |03: BBSList Extended View {formally CMD Key OB}
+
+                |03{ Updated |11MENUCMD.ASC |03file to reflect these changes }
+
+     |11CHANGE -   |03BBS Listing is now scriptable.  This means that you
+                now can add just about any question for the BBS you wish.
+                MCI Codes reflect the different questions (1-8) to display
+                when a user views the BBS List.
+
+                |03{ Added |11BBSLIST.SCR |03file to reflect this update }
+
+     |11CHANGE -   |11-TG |03and |11-TS |03command line loaders for Renegade are
+                now simply just |11-T |03for all telnet connections.  Unless
+                you are using COM/IP as your emulator which the command
+                line changed to |11-TC |03(ie: renegade.exe -n4 -tc).
+
+     |11ADDED  -   |11%xA |03/ |11%xB |03/ |11%xC |03/ |11%xD |03/ |11%xE |03/ |11%xF |03for extra definable
+                sysop strings in the |11BBSLIST.SCR |03file.
+
+                                |11x|03:= to the following values.
+                |11a = 8 chars |03/ |11b = 30 |03/ |11c = 30 |03/ |11d = 40 |03/ |11e = 60 |03/ |11f = 60
+
+                |03Also added %S2 for and extra line of descrition of the
+                BBS.  Changed the way it stores the SOFTWARE. It's all
+                in capital letters now.  Also, added that if can't find
+                |11BBSMN.ASC |03it will echo back that in the sysop log and
+                just print out the bbslist.sysopname, etc and proceed.
+
+     |11UPDATE -   |03The Official Renegade Home page is now located at URL:
+                              |11http://www.renegadebbs.net
+
+     |11REMOVE -   |03Removed the "Moving xx to xx" from writing to the
+                SYSOPx.LOG file.  Saved some clutter there. ;)
+
+     |11FIXED  -   |03The Telnet URL will now save correctly in the
+                system config and not constantly erase itself.
+
+     |11CHANGE -   |03Bulletins now compare Time and Date of Files vs Time
+                and Date of last logon to display as NEW.
+
+     |11CHANGE -   |11NODE*.ASC |03instead of showning a '|11-|03' when a user isn't
+                on a node it will echo back the node number for ~NN, then
+                for ~AV it will display 'Y'. MCI Code ~AC is a 20 Chars
+                String and ~UN is a 36 character string.
+
+     |11CHANGE -   |03The Caller ID switch is now |11-ID |03instead of just |11-I|03
+                Also |11-IP |03puts the IP (if present) into the Caller ID field
+                in the User Editor and anything to do with Caller ID.
+
+     |11ADDED  -   |03The String Editor is now removed from Renegade.  All
+                strings within the editor are now |11EXTERNAL|03.  We will
+                slowly be removing all strings from within Renegade's
+                code and making them external for easy editing!  Also
+                created DUMP to "dump" the STRING.DAT file to the
+                editable language file.
+
+--[ Renegade 01-10.4 released ]------------------------------------------------
+  I really need to update this for future people to see.
+
+  1.  FIXED  - Bulletins - Now will correctly display if a bulletin
+               is new or not to the user per call and are sorted
+               in numerical order.  ie: (2, 7, 19, 22) instead of
+               (22, 2, 19, 7).
+
+  2.  ADDED  - (-T, /T) Toggle.  This will inturn toggle all baud
+               rate speeds to show as "TELNET".  This also disables
+               most comm routines relating to logoffs.  With -T
+               added to loading Renegade, it will no longer pause
+               for a set number of seconds before the BBS will
+               hang the user up.  DO NOT use this command on
+               dialup nodes!  Use this on TELNET ONLY NODES!!!!
+
+   3. REVISED  (-T, /T) (-TG, /TG) (-TS, /TS) Load Toggle.
+               This will inturn toggle the MCI Code ~SP in
+               the last caller ANSI/ASCII to show 'BAUD'.
+               (-T, /T) will do the hang-up procedure on a
+               regular log-off for COM/IP.  (-TG, /TG) & (-TS, /TS)
+               will bypass the passing of the ATH0 hangup string
+               to the fossil/com port and will work with GameSrv
+               or Synchronet respectivly.  This fix's issues of
+               slow hangups while doing a telnet session.
+               DO NOT use this command with dialup nodes!
+
+   3. FIXED  - Fixed Toggles Menu and added warning screen about
+               the use of certain toggles and what else should be
+               changed or certain users may not be able to log
+               back on to the BBS.  (ie:  If you have the BBS
+               check for birthday's and have the toggle to ask
+               for the birthday at new logon set to NO, the user
+               will not be able to logon the BBS since he will not
+               have a birthday set in the user record.)
+
+   4. FIXED  - Added Time Slice Routines to certain functions in
+               Renegade where it awaits for a user input.  This
+               SHOULD fix some slow downs while running under
+               some version of Windows.
+
+   5. FIXED  - Fixed Memory problems with downloads and swapping
+               Renegade out of memory which in turn caused some
+               doors not to function.
+
+   6. CHANGE - Changed all file sizes in Renegade to now show as
+               Kilobyte (KB), and Megabytes (MB) instead of just
+               bytes. (ie: 64,564 bytes NOW DISPLAYS AS 64.5 KB)
+               Also changes to the WFC Screen to reflect this.
+
+   7. FIXED  - Fixed upload Limit of 8.1 MB.  Now, will show
+               files with sizes up to 1.9 GB.
+
+   8. FIXED  - Fixed the AR, AC Flags [- OF -] toggle command to
+               NOT be case sensitive.
+
+   9. ADDED  - MCI Code telnet - This MCI Code shows the users speed,
+               ie: Telnet, Local, or Actual Baud Rate.
+
+
+
+--[ Renegade 98-101d released ]------------------------------------------------
+
+--[ Renegade 98-120a ]---------------------------------------------------------
+
+  - Included in this update is RGUSRIDX.ZIP. Review the documentation enclosed
+    BEFORE installing this update.
+
+  - The "OB" and "OV" cmdkeys have changed (BBSLISTINGS)
+
+    * Bbslistings are still stored in binary format, however, they are now
+      sorted in order of phone number entry as they are saved instead of
+      using a pointer index.
+
+    * You may now remove entries if your ACS meets the following criteria :
+      - You are cosysop or above.
+      - The entry was entered by you.
+
+    * The bbslist now uses the permanent index system instead of user numbers.
+
+  - Changed the ~NN mci code to display the node number even if no one is
+    currently on that node.
+
+  - Fixes :
+      * "NO" cmdkeys didn't work.
+      * The bbslist didn't work on large partitions.
+      * The timebank and DL-K todays fields could not be edited in the
+        user editor.
+
+--[ Renegade 98-139a ]---------------------------------------------------------
+
+  - Removed the "OE" cmdkeys.. If you want to pause a menu, use cmdkeys "-L"
+    options "%PA".
+
+  - Removed the "ON" cmdkeys.. If you want to clear screen on a menu, use
+    cmdkeys "-L" options "%CL".
+
+  - The bbslist will now read a script file. It should be located in your
+    /DATA directory and have the same filename as the bbslist it is
+    referring to with the extension of ".TPL". Included is an example of
+    how to construct one with your favorite text editor. Color and MCI
+    codes "SHOULD" work. (Do not use %DF MCI).
+    (Ie... BBSLIST.BBS uses BBSLIST.TPL for a script file).
+
+  - The way the LASTON.DAT works changed completely. It is now completely
+    dependant upon the "OL" cmdkeys as to whether or the user is added.
+
+    ACS Req : ""
+    Cmdkeys : "OL" <- Creates a LASTON.DAT entry
+    Options : [ACS to add to LASTON.DAT]
+
+    "ACS to add to LASTON.DAT" : Specify the ACS the current user must have
+                                 to be added to the LASTON.DAT. This may
+                                 be any valid ACS. If it is left blank,
+                                 all users who meet the cmdkey's ACS Req
+                                 setting will be logged to LASTON.DAT.
+
+    ACS Req : ""
+    Cmdkeys : "OT"  <- Display LASTON.DAT
+    Options : [number of callers to display]<;filename>
+
+    "Number of callers to display" : Displays defined number of callers.
+                                     BLANK = All callers shown.
+
+    "Filename" : The filename is optional and works the same way as the
+                 old "OL" cmdkeys used to.
+
+
+  - The OA cmdkeys have changed.
+
+    Was :  Cmdkeys : OA
+           Options : [Password];[Validation Key]
+
+    The password was not necessary since you can use the -$ cmdkeys
+    to set a validation password for a linked OA cmdkey.
+
+    Now :  Cmdkeys : OA
+           Options : [Validation Key]<;[Semaphore To Find]>
+
+    "Validation Key" : This is required for this cmdkey to work.
+
+    "Semaphore To Find" : This is completely optional. If used,
+                          Renegade will look for this file and ONLY
+                          validate a user if it exists.
+
+                          If you specify a filename only, it's looked
+                          for in your /TEMP[node] directory. Otherwise
+                          it looks for the full path + filename you
+                          specify.
+
+                          Also note: Renegade deletes this file once
+                                     found and the user is validated.
+
+  - Fixes :
+      * Os2 volume label was treated as a file causing search problems.
+      * Bbslisting probems.
+      * Moving file attaches in email crapped out.
+
+--[ Renegade 98-310a ]---------------------------------------------------------
+
